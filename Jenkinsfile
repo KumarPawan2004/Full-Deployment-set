@@ -3,12 +3,6 @@ pipeline {
 
   stages {
 
-    stage('Clone') {
-      steps {
-        git 'https://github.com/KumarPawan2004/Full-Deployment-set.git'
-      }
-    }
-
     stage('Build Images') {
       steps {
         sh 'docker-compose build'
